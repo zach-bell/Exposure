@@ -1,6 +1,4 @@
-﻿using System.CodeDom.Compiler;
-using Core.Contracts;
-using Core.Contracts.Maze;
+﻿using Core.Contracts.Maze;
 using Core.Structures;
 using Core.Structures.Maze;
 using Core.Utilities.Procedural;
