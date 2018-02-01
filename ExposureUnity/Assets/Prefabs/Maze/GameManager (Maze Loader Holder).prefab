@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4777687508725634}
   - component: {fileID: 114137499212132610}
+  - component: {fileID: 114327763784434968}
   m_Layer: 0
   m_Name: GameManager (Maze Loader Holder)
   m_TagString: Untagged
@@ -56,3 +57,20 @@ MonoBehaviour:
   wall: {fileID: 101274, guid: 2a571ace6952b154ca2ff06b0540f264, type: 2}
   floor: {fileID: 1105701436373156, guid: fb4b088201533bf42bb1482798e86574, type: 2}
   size: 6
+--- !u!114 &114327763784434968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544198139488726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9afe3e375d24dc3978ed6cdc4dbd257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeRows: 10
+  mazeColumns: 10
+  wall: {fileID: 101274, guid: 2a571ace6952b154ca2ff06b0540f264, type: 2}
+  floor: {fileID: 1105701436373156, guid: fb4b088201533bf42bb1482798e86574, type: 2}
+  size: 6
+  Difficulty: 0
