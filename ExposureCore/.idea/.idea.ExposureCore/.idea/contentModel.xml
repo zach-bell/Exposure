@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\zacha\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_ExposureCore.-2011416815.00" t="ExcludeRecursive" />
+    <e p="C:\Users\zacha\Desktop\Some-Game-Project\ExposureCore" t="IncludeFlat">
+      <e p="Core" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contracts" t="Include">
+          <e p="BaseSeedProvider.cs" t="Include" />
+          <e p="Maze" t="Include">
+            <e p="MazeAlgorithmBase.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Core.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Structures" t="Include">
+          <e p="Audio" t="Include">
+            <e p="Sound.cs" t="Include" />
+          </e>
+          <e p="Difficulty.cs" t="Include" />
+          <e p="Maze" t="Include">
+            <e p="MazeCell.cs" t="Include" />
+            <e p="WallDirection.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Utilities" t="Include">
+          <e p="Maze" t="Include">
+            <e p="MazeAlgorithm.cs" t="Include" />
+          </e>
+          <e p="Procedural" t="Include">
+            <e p="ConfigurableSeedProvider.cs" t="Include" />
+            <e p="EasySeedProvider.cs" t="Include" />
+            <e p="HardSeedProvider.cs" t="Include" />
+            <e p="MediumSeedProvider.cs" t="Include" />
+            <e p="ProceduralNumberGenerator.cs" t="Include" />
+            <e p="ResolveSeedProvider.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="ExposureCore.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
