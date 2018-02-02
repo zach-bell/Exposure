@@ -2,6 +2,7 @@
 using Exposure.Structures;
 using Exposure.Structures.Maze;
 using Exposure.Utilities.Procedural;
+using Exposure.Utilities.Settings;
 using UnityEngine;
 
 namespace Exposure.Utilities.Maze
@@ -11,11 +12,12 @@ namespace Exposure.Utilities.Maze
         private int currentRow = 0;
         private int currentColumn = 0;
         private ProceduralNumberGenerator generator;
+        private SettingsService settingsService = SettingsService.GetInstance();
         private bool courseComplete = false;
 
-        public MazeAlgorithm(MazeCell[,] mazeCells, Difficulty difficulty) : base(mazeCells)
+        public MazeAlgorithm(MazeCell[,] mazeCells) : base(mazeCells)
         {
-            generator = new ProceduralNumberGenerator(ResolveSeedProvider.Resolve(difficulty));
+            generator = new ProceduralNumberGenerator(ResolveSeedProvider.Resolve(settingsService.Difficulty));
             
             CreateMaze();
         }

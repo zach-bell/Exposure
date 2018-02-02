@@ -1,5 +1,4 @@
 ﻿using Exposure.Contracts.Maze;
-using Exposure.Structures;
 using Exposure.Structures.Maze;
 using Exposure.Utilities.Maze;
 using UnityEngine;
@@ -12,14 +11,13 @@ namespace UnityScripts.Maze
         public GameObject wall; 
         public GameObject floor;
         public float size = 2f;
-        public Difficulty Difficulty;
 
         // Use this for initialization
         void Awake()
         {
             MazeCell[,] unbuiltMaze = BuildMazeGrid();
 
-            MazeAlgorithmBase ma = new MazeAlgorithm(unbuiltMaze, this.Difficulty);
+            MazeAlgorithmBase ma = new MazeAlgorithm(unbuiltMaze);
             ma.CreateMaze();
         }
 
