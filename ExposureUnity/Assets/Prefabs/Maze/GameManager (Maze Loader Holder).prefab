@@ -9,18 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1544198139488726}
+  m_RootGameObject: {fileID: 1663939198674944}
   m_IsPrefabParent: 1
---- !u!1 &1544198139488726
+--- !u!1 &1663939198674944
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4777687508725634}
-  - component: {fileID: 114137499212132610}
-  - component: {fileID: 114327763784434968}
+  - component: {fileID: 4597041556859684}
+  - component: {fileID: 114846208681450810}
   m_Layer: 0
   m_Name: GameManager (Maze Loader Holder)
   m_TagString: Untagged
@@ -28,41 +27,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4777687508725634
+--- !u!4 &4597041556859684
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1544198139488726}
+  m_GameObject: {fileID: 1663939198674944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.051757812, y: -0.08178711, z: -0.13061523}
+  m_LocalPosition: {x: -26.666092, y: 93.95093, z: 9.09583}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114137499212132610
+--- !u!114 &114846208681450810
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1544198139488726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 334ef5519144d0e438a932a03abdacc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mazeRows: 12
-  mazeColumns: 18
-  wall: {fileID: 101274, guid: 2a571ace6952b154ca2ff06b0540f264, type: 2}
-  floor: {fileID: 1105701436373156, guid: fb4b088201533bf42bb1482798e86574, type: 2}
-  size: 6
---- !u!114 &114327763784434968
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1544198139488726}
+  m_GameObject: {fileID: 1663939198674944}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9afe3e375d24dc3978ed6cdc4dbd257, type: 3}

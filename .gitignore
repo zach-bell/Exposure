@@ -27,6 +27,7 @@ ExposureUnity/*.sln
 
 # Unity3D generated meta files
 *.pidb.meta
+Exposure.pdb.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
