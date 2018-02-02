@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Core.Contracts;
-using Core.Structures.Maze;
+using Exposure.Contracts;
+using Exposure.Structures.Maze;
 using UnityEngine;
 
-namespace Core.Utilities.Procedural
+namespace Exposure.Utilities.Procedural
 {
     public class ProceduralNumberGenerator
     {

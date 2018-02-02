@@ -1,4 +1,4 @@
-﻿namespace Core.Structures.Maze
+﻿namespace Exposure.Structures.Maze
 {
     public enum WallDirection
     {

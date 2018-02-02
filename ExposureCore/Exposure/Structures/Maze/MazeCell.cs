@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Core.Structures.Maze
+namespace Exposure.Structures.Maze
 {
     public class MazeCell
     {

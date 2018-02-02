@@ -1,6 +1,6 @@
-﻿using Core.Contracts;
+﻿using Exposure.Contracts;
 
-namespace Core.Utilities.Procedural
+namespace Exposure.Utilities.Procedural
 {
     public class ConfigurableSeedProvider : BaseSeedProvider
     {

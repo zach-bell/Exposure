@@ -1,10 +1,10 @@
-﻿using Core.Contracts.Maze;
-using Core.Structures;
-using Core.Structures.Maze;
-using Core.Utilities.Procedural;
+﻿using Exposure.Contracts.Maze;
+using Exposure.Structures;
+using Exposure.Structures.Maze;
+using Exposure.Utilities.Procedural;
 using UnityEngine;
 
-namespace Core.Utilities.Maze
+namespace Exposure.Utilities.Maze
 {
     public class MazeAlgorithm : MazeAlgorithmBase
     {

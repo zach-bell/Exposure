@@ -2,7 +2,7 @@
 using UnityEngine;
 using Random = System.Random;
 
-namespace Core.Contracts
+namespace Exposure.Contracts
 {
     public abstract class BaseSeedProvider
     {

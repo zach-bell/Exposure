@@ -1,7 +1,7 @@
-﻿using Core.Contracts;
+﻿using Exposure.Contracts;
 using UnityEngine;
 
-namespace Core.Utilities.Procedural
+namespace Exposure.Utilities.Procedural
 {
     public class EasySeedProvider : BaseSeedProvider
     {

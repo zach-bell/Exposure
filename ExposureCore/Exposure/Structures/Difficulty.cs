@@ -1,4 +1,4 @@
-﻿namespace Core.Structures
+﻿namespace Exposure.Structures
 {
     public enum Difficulty
     {

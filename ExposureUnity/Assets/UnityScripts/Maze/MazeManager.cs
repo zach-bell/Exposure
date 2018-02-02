@@ -1,7 +1,7 @@
-﻿using Core.Contracts.Maze;
-using Core.Structures;
-using Core.Structures.Maze;
-using Core.Utilities.Maze;
+﻿using Exposure.Contracts.Maze;
+using Exposure.Structures;
+using Exposure.Structures.Maze;
+using Exposure.Utilities.Maze;
 using UnityEngine;
 
 namespace UnityScripts.Maze

@@ -1,6 +1,6 @@
-﻿using Core.Structures.Maze;
+﻿using Exposure.Structures.Maze;
 
-namespace Core.Contracts.Maze
+namespace Exposure.Contracts.Maze
 {
     public abstract class MazeAlgorithmBase
     {

@@ -1,7 +1,7 @@
-﻿using Core.Contracts;
-using Core.Structures;
+﻿using Exposure.Contracts;
+using Exposure.Structures;
 
-namespace Core.Utilities.Procedural
+namespace Exposure.Utilities.Procedural
 {
     public class ResolveSeedProvider
     {
