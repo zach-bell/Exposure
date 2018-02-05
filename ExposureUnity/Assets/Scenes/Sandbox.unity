@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -113,6 +113,62 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &353607927 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4597041556859684, guid: 184e19071e3cb3a44bf93ce563fa700a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1052660396}
+--- !u!1 &697435941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 697435943}
+  - component: {fileID: 697435942}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &697435942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 697435941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ea4fd38bae1f24c83e1acbeaa06800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+--- !u!4 &697435943
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 697435941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1052660396
 Prefab:
   m_ObjectHideFlags: 0
@@ -151,6 +207,35 @@ Prefab:
     - target: {fileID: 4597041556859684, guid: 184e19071e3cb3a44bf93ce563fa700a, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663939198674944, guid: 184e19071e3cb3a44bf93ce563fa700a, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2800000, guid: c0fa58091049bd24394fa15b0b6d4c5a, type: 3}
+    - target: {fileID: 114846208681450810, guid: 184e19071e3cb3a44bf93ce563fa700a,
+        type: 2}
+      propertyPath: objectPos
+      value: 
+      objectReference: {fileID: 353607927}
+    - target: {fileID: 114846208681450810, guid: 184e19071e3cb3a44bf93ce563fa700a,
+        type: 2}
+      propertyPath: objectTrans
+      value: 
+      objectReference: {fileID: 353607927}
+    - target: {fileID: 114846208681450810, guid: 184e19071e3cb3a44bf93ce563fa700a,
+        type: 2}
+      propertyPath: Difficulty
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114846208681450810, guid: 184e19071e3cb3a44bf93ce563fa700a,
+        type: 2}
+      propertyPath: mazeRows
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114846208681450810, guid: 184e19071e3cb3a44bf93ce563fa700a,
+        type: 2}
+      propertyPath: mazeColumns
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 184e19071e3cb3a44bf93ce563fa700a, type: 2}
@@ -232,7 +317,6 @@ GameObject:
   - component: {fileID: 1973230735}
   - component: {fileID: 1973230734}
   - component: {fileID: 1973230733}
-  - component: {fileID: 1973230738}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -310,20 +394,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 34.929, y: 0, z: 0}
---- !u!95 &1973230738
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1973230732}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6d03970f14705a64a89901929242ec38, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1

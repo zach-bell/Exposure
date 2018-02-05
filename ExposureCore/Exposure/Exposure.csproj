@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Contracts\BaseSeedProvider.cs" />
     <Compile Include="Contracts\Maze\MazeAlgorithmBase.cs" />
+    <Compile Include="Structures\Audio\Sound.cs" />
     <Compile Include="Structures\Difficulty.cs" />
     <Compile Include="Structures\Maze\MazeCell.cs" />
     <Compile Include="Structures\Maze\WallDirection.cs" />

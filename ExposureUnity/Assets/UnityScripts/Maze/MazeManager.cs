@@ -4,72 +4,69 @@ using Exposure.Structures.Maze;
 using Exposure.Utilities.Maze;
 using UnityEngine;
 
-namespace UnityScripts.Maze
-{
-    public class MazeManager : MonoBehaviour
-    {
-        public int mazeRows, mazeColumns;
-        public GameObject wall; 
-        public GameObject floor;
-        public float size = 2f;
-        public Difficulty Difficulty;
+namespace UnityScripts.Maze {
+	public class MazeManager : MonoBehaviour {
+		public int mazeRows, mazeColumns;
+		public GameObject wall;
+		public GameObject floor;
+		public float size = 2f;
+		public Difficulty Difficulty;
 
-        // Use this for initialization
-        void Awake()
-        {
-            MazeCell[,] unbuiltMaze = BuildMazeGrid();
+		[SerializeField]
+		private Transform objectPos;
 
-            MazeAlgorithmBase ma = new MazeAlgorithm(unbuiltMaze, this.Difficulty);
-            ma.CreateMaze();
-        }
+		// Use this for initialization
+		void Awake() {
+			objectPos = objectPos ?? transform;
 
-        private MazeCell[,] BuildMazeGrid()
-        {
-            MazeCell[,] mazeCells = new MazeCell[mazeRows, mazeColumns];
+			MazeCell[,] unbuiltMaze = BuildMazeGrid();
 
-            for (int currentRow = 0; currentRow < mazeRows; currentRow++)
-            {
-                for (int currentColumn = 0; currentColumn < mazeColumns; currentColumn++)
-                {
-                    mazeCells[currentRow, currentColumn] = new MazeCell();
+			MazeAlgorithmBase ma = new MazeAlgorithm(unbuiltMaze, this.Difficulty);
+			ma.CreateMaze();
+		}
 
-                    mazeCells[currentRow, currentColumn].Floor =
-                        Instantiate(floor, new Vector3(currentRow * size, -(size / 2f), currentColumn * size),
-                            Quaternion.identity) as GameObject;
-                    mazeCells[currentRow, currentColumn].Floor.name = "Floor " + currentRow + "," + currentColumn;
-                    //mazeCells [r, c] .floor.transform.Rotate (Vector3.right, 90f);
+		private MazeCell[,] BuildMazeGrid() {
+			MazeCell[,] mazeCells = new MazeCell[mazeRows, mazeColumns];
 
-                    if (currentColumn == 0)
-                    {
-                        mazeCells[currentRow, currentColumn].WestWall =
-                            Instantiate(wall, new Vector3(currentRow * size, 0, (currentColumn * size) - (size / 2f)),
-                                Quaternion.identity) as GameObject;
-                        mazeCells[currentRow, currentColumn].WestWall.name = "West Wall " + currentRow + "," + currentColumn;
-                    }
+			for (int currentRow = 0; currentRow < mazeRows; currentRow++) {
+				for (int currentColumn = 0; currentColumn < mazeColumns; currentColumn++) {
+					mazeCells[currentRow, currentColumn] = new MazeCell();
 
-                    mazeCells[currentRow, currentColumn].EastWall =
-                        Instantiate(wall, new Vector3(currentRow * size, 0, (currentColumn * size) + (size / 2f)),
-                            Quaternion.identity) as GameObject;
-                    mazeCells[currentRow, currentColumn].EastWall.name = "East Wall " + currentRow + "," + currentColumn;
+					mazeCells[currentRow, currentColumn].Floor =
+						Instantiate(floor, new Vector3(currentRow * size, -(size / 2f), currentColumn * size) + objectPos.position,
+							Quaternion.identity) as GameObject;
+					mazeCells[currentRow, currentColumn].Floor.name = "Floor " + currentRow + "," + currentColumn;
+					//mazeCells [r, c] .floor.transform.Rotate (Vector3.right, 90f);
 
-                    if (currentRow == 0)
-                    {
-                        mazeCells[currentRow, currentColumn].NorthWall =
-                            Instantiate(wall, new Vector3((currentRow * size) - (size / 2f), 0, currentColumn * size),
-                                Quaternion.identity) as GameObject;
-                        mazeCells[currentRow, currentColumn].NorthWall.name = "North Wall " + currentRow + "," + currentColumn;
-                        mazeCells[currentRow, currentColumn].NorthWall.transform.Rotate(Vector3.up * 90f);
-                    }
+					if (currentColumn == 0) {
+						mazeCells[currentRow, currentColumn].WestWall =
+							Instantiate(wall, new Vector3(currentRow * size, 0, (currentColumn * size) - (size / 2f)) + objectPos.position,
+								Quaternion.identity) as GameObject;
+						mazeCells[currentRow, currentColumn].WestWall.name = "West Wall " + currentRow + "," + currentColumn;
+					}
 
-                    mazeCells[currentRow, currentColumn].SouthWall =
-                        Instantiate(wall, new Vector3((currentRow * size) + (size / 2f), 0, currentColumn * size),
-                            Quaternion.identity) as GameObject;
-                    mazeCells[currentRow, currentColumn].SouthWall.name = "South Wall " + currentRow + "," + currentColumn;
-                    mazeCells[currentRow, currentColumn].SouthWall.transform.Rotate(Vector3.up * 90f);
-                }
-            }
+					mazeCells[currentRow, currentColumn].EastWall =
+						Instantiate(wall, new Vector3(currentRow * size, 0, (currentColumn * size) + (size / 2f)) + objectPos.position,
+							Quaternion.identity) as GameObject;
+					mazeCells[currentRow, currentColumn].EastWall.name = "East Wall " + currentRow + "," + currentColumn;
 
-            return mazeCells;
-        }
-    }
+					if (currentRow == 0) {
+						mazeCells[currentRow, currentColumn].NorthWall =
+							Instantiate(wall, new Vector3((currentRow * size) - (size / 2f), 0, currentColumn * size) + objectPos.position,
+								Quaternion.identity) as GameObject;
+						mazeCells[currentRow, currentColumn].NorthWall.name = "North Wall " + currentRow + "," + currentColumn;
+						mazeCells[currentRow, currentColumn].NorthWall.transform.Rotate(Vector3.up * 90f);
+					}
+
+					mazeCells[currentRow, currentColumn].SouthWall =
+						Instantiate(wall, new Vector3((currentRow * size) + (size / 2f), 0, currentColumn * size) + objectPos.position,
+							Quaternion.identity) as GameObject;
+					mazeCells[currentRow, currentColumn].SouthWall.name = "South Wall " + currentRow + "," + currentColumn;
+					mazeCells[currentRow, currentColumn].SouthWall.transform.Rotate(Vector3.up * 90f);
+				}
+			}
+
+			return mazeCells;
+		}
+	}
 }
