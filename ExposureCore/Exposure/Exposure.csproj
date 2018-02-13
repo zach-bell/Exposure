@@ -52,6 +52,7 @@
     <Compile Include="Utilities\Procedural\EasySeedProvider.cs" />
     <Compile Include="Utilities\Procedural\HardSeedProvider.cs" />
     <Compile Include="Utilities\Procedural\MediumSeedProvider.cs" />
+    <Compile Include="Utilities\Procedural\Noise.cs" />
     <Compile Include="Utilities\Procedural\ProceduralNumberGenerator.cs" />
     <Compile Include="Utilities\Procedural\ResolveSeedProvider.cs" />
   </ItemGroup>
