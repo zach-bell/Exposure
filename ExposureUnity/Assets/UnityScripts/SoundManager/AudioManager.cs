@@ -1,7 +1,7 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
 using System;
-using Exposure.Sound;
+using Exposure.Structures.Audio;
 
 public class AudioManager : MonoBehaviour {
 

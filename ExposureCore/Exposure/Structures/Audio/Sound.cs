@@ -1,7 +1,6 @@
-﻿using UnityEngine.Audio;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Exposure.Sound {
+namespace Exposure.Structures.Audio {
 	[System.Serializable]
 	public class Sound {
 
