@@ -1,7 +1,4 @@
-﻿using Exposure.Structures.Maze;
-
-namespace Exposure.Contracts.Maze
-{
+﻿
     public abstract class MazeAlgorithmBase
     {
         public MazeAlgorithmBase(MazeCell[,] mazeCells)
@@ -16,4 +13,3 @@ namespace Exposure.Contracts.Maze
 
         public abstract void CreateMaze();
     }
-}
