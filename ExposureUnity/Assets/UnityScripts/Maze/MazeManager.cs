@@ -4,7 +4,7 @@ using Exposure.Structures.Maze;
 using Exposure.Utilities.Maze;
 using UnityEngine;
 
-namespace UnityScripts.Maze {
+
 	public class MazeManager : MonoBehaviour {
 		public int mazeRows, mazeColumns;
 		public GameObject wall;
@@ -69,4 +69,3 @@ namespace UnityScripts.Maze {
 			return mazeCells;
 		}
 	}
-}

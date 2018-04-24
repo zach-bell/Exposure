@@ -10,6 +10,8 @@ public class FirstPersonCam : MonoBehaviour {
 	Vector3 currentRotation;
 	public Vector2 pitchMinMax = new Vector2(-40, 85);
 	
+	[ReadOnly] public float currentPitch = 0;
+	
 	[Header("Camera Target Controls")]
 	public Transform target;
 	public float distFromTarget = 2;
@@ -31,7 +33,7 @@ public class FirstPersonCam : MonoBehaviour {
 		yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
 		pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
 		pitch = Mathf.Clamp(pitch, pitchMinMax.x, pitchMinMax.y);
-
+		currentPitch = pitch;
 		currentRotation = Vector3.SmoothDamp(currentRotation, new Vector3(pitch, yaw), ref rotationSmoothVelocity, rotationSmoothTime);
 		transform.eulerAngles = currentRotation;
 
